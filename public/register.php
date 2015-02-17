@@ -18,7 +18,11 @@
 
 			if ($_POST["password"] == $_POST["confirmation"])
 			{
-				if (query("INSERT INTO users (username, hash) VALUES (?, ?)", $_POST["username"], crypt($_POST["password"])) !== false)
+				$salt = "$2y$14$";
+				for ($i = 0; $i < 22; $i++) {
+					$salt .= substr("./ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", mt_rand(0, 63), 1);
+				}
+				if (query("INSERT INTO users (username, hash) VALUES (?, ?)", $_POST["username"], crypt($_POST["password"], $salt)) !== false)
 				{
 					$rows = query("SELECT LAST_INSERT_ID() AS id");
 					$id = $rows[0]["id"];

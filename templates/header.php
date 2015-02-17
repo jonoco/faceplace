@@ -21,16 +21,20 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="jumbotron">
-           <h1>FacePlace</h1>
-           <p>The world's first social network for faces</p>
-        </div>
-        <div class="nav">
-            <ul>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav nav-pills">
                 <li><a href="/index.php">Profile</a></li>
-                <li><a href="/change_password.php">Change Password</a></li>
-                <li><a href="/logout.php">Log Out</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/change_profile.php">Edit Profile</a></li>
+                        <li><a href="/change_avatar.php">Change Avatar</a></li>
+                        <li><a href="/change_password.php">Change Password</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/logout.php">Log Out</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

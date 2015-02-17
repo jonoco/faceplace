@@ -3,9 +3,6 @@
     /**
      * config.php
      *
-     * Computer Science 50
-     * Problem Set 7
-     *
      * Configures pages.
      */
 
@@ -20,12 +17,12 @@
     // enable sessions
     session_start();
 
-    // require authentication for all pages except /login.php, /logout.php, and /register.php
-    if (!in_array($_SERVER["PHP_SELF"], ["/login.php", "/logout.php", "/register.php", "/welcome.php"]))
+    // require authentication for all pages except /login.php, /logout.php, /welcome.php, and /register.php
+    if (!in_array($_SERVER["PHP_SELF"], ["/welcome.php", "/login.php", "/register.php", "/logout.php"]))
     {
         if (empty($_SESSION["id"]))
         {
-            redirect("login.php");
+            redirect("welcome.php");
         }
     }
 
