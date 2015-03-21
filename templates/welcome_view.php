@@ -1,106 +1,54 @@
-<!DOCTYPE html>
+<style> body { background: #222222 url('/img/login_bg.jpg') no-repeat; background-size: cover; } </style>
 
-<html>
-
-<head>
-
-    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="/css/bootstrap-theme.min.css" rel="stylesheet"/>
-    <link href="/css/styles.css" rel="stylesheet"/>
-
-    <title>Faceplace</title>
-   
-    <script src="/js/jquery-1.11.1.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/scripts.js"></script>
-    <style> 
-        body {
-            
-            background: #222222 url('/img/login_bg.jpg') no-repeat; 
-            background-size: cover;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <div class="jumbotron">
-           <h1>FacePlace</h1>
-           <p>The world's first social network for faces</p>
-        </div>
-    </div>
-    <div class="container">
-        
-        <a href="#loginModal" role="button" class="btn btn-large btn-primary" data-toggle="modal">Log in</a>
-        <a href="#registerModal" role="button" class="btn btn-large btn-info" data-toggle="modal">Sign up</a>
-     
-        <!-- Modal HTML -->
-        <div id="loginModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Log in</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form action="/login.php" method="post">
-                            <fieldset>
-                                <div class="form-group">
-                                    <input autofocus class="form-control" name="username" placeholder="Username" type="text"/>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" name="password" placeholder="Password" type="password"/>
-
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary">Log In</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>    
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
+<div class="container">
+    <div class="front-card">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="front-welcome">
+                    <h1>Welcome to Faceplace.</h1>
+                    <p>Connect with other faces. See other faces. Look at other faces. 
+                    Do things with other faces. Verb with other faces. Have you ever been looking at another 
+                    face and thought, "I could be friends with that face." Make that thought a reality through 
+                    a series of clicks and inputs and join Faceplace right now.</p>
                 </div>
             </div>
-        </div>
-
-        <div id="registerModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Sign up</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form action="register.php" method="post">
-                            <fieldset>
-                                <div class="form-group">
-                                    <input autofocus class="form-control" name="username" placeholder="Username" type="text"/>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" name="password" placeholder="Password" type="password"/>
-                                </div>
-                                <div class ="form-group">
-                                    <input class="form-control" name="confirmation" placeholder="Retype Password" type="password"/>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary">Register</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
+            <div class="col-sm-4">
+                <div class="signin">
+                    <form action="/login.php" method="post">
+                        <fieldset>
+                            <div class="form-group">
+                                <input autofocus class="form-control" name="username" placeholder="Username" type="text"/>
+                            </div>
+                            <div class="form-group">
+                                <table>
+                                    <tr>
+                                        <td><input class="form-control" name="password" placeholder="Password" type="password"/></td>
+                                        <td><button type="submit" class="btn btn-primary">Log In</button> </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="signup">
+                    <h4 class="pull-left">Get access to all the faces you can handle</h4>
+                    <form action="register.php" class="form" method="post">
+                        <div class="form-group has-feedback">
+                            <span id="user-result"></span>
+                            <input autofocus class="form-control" id="reg-username" name="username" placeholder="Username" autocomplete="off" minlength="3" maxlength="25" type="text"/>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="password" placeholder="Password" type="password"/>
+                        </div>
+                        <div class ="form-group">
+                            <input class="form-control" name="confirmation" placeholder="Retype Password" type="password"/>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary pull-right">Sign up for Faceplace</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="container">
-        <div class="row bottom">
-            <div class="col-md-12">
-                <p>&#169; Joshua Cox</p>
-            </div>
-        </div>
-    </div>
-
-</body>
-</html>
+</div>

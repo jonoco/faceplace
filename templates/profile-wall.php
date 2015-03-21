@@ -3,10 +3,10 @@
         <form class="form" action="comment.php" role="form" method="post">
             <fieldset>
                 <div class="form-group">
-                    <textarea autofocus class="form-control" name="comment" placeholder="What are you thinking..." rows="3"></textarea>
+                    <textarea autofocus class="status-box form-control" name="comment" placeholder="What are you thinking..." rows="2"></textarea>
                 </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Comment</button>
+                <div id="comment-submit" class="form-group">
+                    <button type="submit" class="btn btn-mini btn-primary status-btn pull-right">Post</button>
                 </div>
                 <input type="hidden" name="user" value=<?= $user ?>>
             </fieldset>

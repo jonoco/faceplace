@@ -3,67 +3,124 @@
  *
  */
 
+/*
+ *  Globals
+ */
 body {
-    background-color: #bbb;
+    padding-top: 70px;
+    background-color: #dddddd;
+}
+
+.bottom {
+    color: #eeeeee;
+    margin-top: 100px;
+}
+
+.navbar {
+    background-color: #6699FF;
+}
+
+.navbar a {
+    color: #ffffff;
+}
+
+.navbar-brand img {
+    width: 92px;
+}
+
+.user-nav {
+    margin-top: 10px;
 }
 
 .container {
-
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 
-.bottom {
-    margin-top: 200px;
+/*
+ *  Landing view
+ */
+.front-card {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.front-welcome {
+    text-align: left;
+    color: #323232;
+    background-color: rgba(222, 222, 222, 0.5);
+    border-radius: 6px;
+    padding: 10px;
+    width: 400px;
 }
 
-.comment {
-    padding: 4px;
+.signin, .signup {
+    background-color: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    padding: 10px;
+    float: right;
+    width: 300px;
+}
+
+.signup {
+}
+
+.signin {
+    margin-bottom: 12px;
+}
+
+#user-result {
+    color: #ee2222;
+}
+
+/*
+ *  Profile view
+ */
+.profile {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.users, .profile-avatar, .profile-aboutme, .comment-form, .comment {
+    padding: 6px;
+    box-shadow: 1px 1px 1px #888888;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.comment { 
     margin-top: 15px;
     margin-bottom: 15px;
     text-align: left;
-    box-shadow: 1px 1px 1px #888888;
-    border-radius: 4px;
-    background-color: #ffffff;
 }
 
-.commment-form {
-    background-color: #ffffff;
-}
-
-.navbar {
-    background-color: #6699FF;
-    padding-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.navbar-inner {
-    display: inline-block;
-}
-
-.navbar-inner a {
-    color: #ffffff;
-    font-size: 16px;
-    font-family: "Helvetica", serif;
-}
-
-.users {
-    padding: 4px;
-    box-shadow: 1px 1px 1px #888888;
-    border-radius: 4px;
-    background-color: #ffffff;
-}
-
-.profile {
-    padding: 4px;
-    box-shadow: 1px 1px 1px #888888;
-    border-radius: 4px;
-    background-color: #ffffff;
+.profile-aboutme {
+    margin-top: 15px;
+    text-align: left;
 }
 
 .media-body h6 {
     margin: 4px 2px;
     color: #999999;
+}
+
+/*
+ *  Settings view
+ */
+.change-profile {
+    margin-left: 100px;
+}
+
+.change-profile form {
+    float: left;
+    margin-top: 10px;
+}
+
+.change-profile label {
+    width: 120px;
+    margin-right: 10px;
+    text-align: right;
 }
