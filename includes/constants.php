@@ -6,16 +6,16 @@
      * Global constants.
      */
 
-    // your database's name
+    // database's name
     define("DATABASE", "social");
 
-    // your database's password
-    define("PASSWORD", "crimson");
+    // database's password
+    define("PASSWORD", "pass");
 
-    // your database's server
+    // database's server
     define("SERVER", "localhost");
 
-    // your database's username
-    define("USERNAME", "jharvard");
+    // database's username
+    define("USERNAME", "admin");
 
 ?>
